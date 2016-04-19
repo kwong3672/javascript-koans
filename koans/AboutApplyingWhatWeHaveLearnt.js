@@ -133,18 +133,73 @@ describe("About Applying What We Have Learnt", function() {
   it("should find the largest palindrome made from the product of two 3 digit numbers", function () {
     
   });
-
+*/
+/* uncomment to find smallest number divisible by 1 - 20
+// working but takes over 30 seconds to compile
   it("should find the smallest number divisible by each of the numbers 1 to 20", function () {
       
-    
+      var smallestNum = function(){
+        var num = 1;
+        while (true) {
+          var allDivisible = true
+          for (var i = 1; i <= 20; i++){
+            if ((num % i) === 0 && allDivisible){}
+            else {
+              allDivisible = false;
+            }  
+
+            if (i === 20 && allDivisible){
+              return num;
+            }
+          }
+        num++;
+        }
+      }
+    expect(smallestNum()).toBe(232792560);
+
   });
+*/
 
   it("should find the difference between the sum of the squares and the square of the sums", function () {
+    var squareDiff = function(num1, num2){
+      var sumSquare;
+      var squareSum;
+
+      sumSquare = (num1 * num1) + (num2 * num2);
+      squareSum = (num1 + num2) * (num1 + num2);
+      return sumSquare - squareSum;
+
+    };
+
+    expect(squareDiff(4, 5)).toBe(-40)
     
   });
 
   it("should find the 10001st prime", function () {
+    var findPrime = function(){
+      var prime = [2];
+      var num = 3;
+      while (!prime[10000]){
+
+        var divisible = false;
+        for (var i = 0; i < prime.length; i++){
+          if (num % prime[i] === 0){
+            divisible = true;
+          }
+        }
+
+        if (divisible === false){
+          prime.push(num);
+        }
+
+//        if (prime[10000]){return prime[10000];}
+        num++;
+      }
+      return prime[10000];
+    };
+
+    expect(findPrime()).toBe(104743);
 
   });
-  */
+  
 });
