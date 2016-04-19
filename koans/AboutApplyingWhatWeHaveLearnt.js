@@ -175,6 +175,7 @@ describe("About Applying What We Have Learnt", function() {
     
   });
 
+/*
   it("should find the 10001st prime", function () {
     var findPrime = function(){
       var prime = [2];
@@ -192,7 +193,6 @@ describe("About Applying What We Have Learnt", function() {
           prime.push(num);
         }
 
-//        if (prime[10000]){return prime[10000];}
         num++;
       }
       return prime[10000];
@@ -201,5 +201,5 @@ describe("About Applying What We Have Learnt", function() {
     expect(findPrime()).toBe(104743);
 
   });
-  
+ */ 
 });
